@@ -34,7 +34,7 @@
  });
 
  $('body').click(function(e){
-   if ($(e.target).parents().is('.burgerButton' || 'nav')){
+   if ($(e.target).parents().is('.burgerButton' || 'nav') || $(e.target).is('.burgerButton')){
      null
    }else{
       const nav = $("nav");
