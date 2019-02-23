@@ -210,7 +210,6 @@ main h2{
 }
  .contactLinks h2{
    font-size: 4vw;
-   line-height:auto;
    margin: 0;
    color: black;
  }
@@ -264,12 +263,12 @@ main h2{
 
 @media (min-width: 1024px) {
   /*Navigation and Hamburger Menu*/
-.burgerButton{
-  display: none;
-}
-nav{
-  display: block;
-}
+  .burgerButton{
+    display: none;
+  }
+  nav{
+    display: block;
+  }
 
   /* Header and Bio */
   .photo-bio{
@@ -280,11 +279,11 @@ nav{
     max-width: 75%;
     margin: 0 auto;
   }
-header p{
-  display: inline-block;
-  max-width: 50%;
-  margin: 0;
-}
+  header p{
+    display: inline-block;
+    max-width: 50%;
+    margin: 0;
+  }
 
   /* IMAGES and OVERLAY*/
   .photo-container{
