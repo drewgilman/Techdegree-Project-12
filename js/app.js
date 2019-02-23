@@ -20,35 +20,47 @@
    }
  });
 
- //Navigation and Hamburger Menu
-// $(window).resize(function() {   
-    if ($(window).width()<1024){
-      console.log('Test');
-     //Rotate Hamburger when clicked and show/hide nav menu
-     $(".burgerButton").click(function(){
-       const burger = $(".burgerSVG");
-       const nav = $("nav");
-       if(burger.hasClass("rotate")){
-         burger.removeClass("rotate");
-         nav.slideUp();
-         console.log('up');
-       } else {
-           burger.addClass("rotate");
-           nav.slideDown();
-           console.log('down');
-       }
-     });
-    // Close Nav if click outside of Nav
-     $('body').click(function(e){
-       if ($(e.target).parents().is('.burgerButton' || 'nav') || $(e.target).is('.burgerButton')){
-         null;
-       } else{
-          const nav = $("nav");
-          const burger = $(".burgerSVG");
-          nav.slideUp();
-          burger.removeClass("rotate");
-       }
-      });
+ const nav = $("nav");
+ const burger = $(".burgerSVG");
 
-    };
-// });
+ //Rotate Hamburger when clicked and show/hide nav menu
+ function clickBurger() {
+   if(burger.hasClass("rotate")){
+     burger.removeClass("rotate");
+     nav.slideUp();
+     return;
+   } else {
+       burger.addClass("rotate");
+       nav.slideDown();
+       return;
+   }
+ }
+
+// Close Nav if click outside of Nav
+ function bodyClick(e) {
+   if ($(window).width()<1024){
+     if ($(e.target).parents().is('.burgerButton' || 'nav') || $(e.target).is('.burgerButton')){
+       return;
+     } else{
+        nav.slideUp();
+        burger.removeClass("rotate");
+        return;
+     }
+   }
+ }
+
+ // Navigation and Hamburger Menu
+$('body').click(bodyClick);
+$(".burgerButton").click(clickBurger);
+
+//Window resize show/hide nav/burger
+$(window).resize(function() {
+  if (window.innerWidth>1023){
+    nav.show();
+    burger.removeClass("rotate");
+  } else if (burger.hasClass("rotate")){
+    nav.show();
+  } else {
+    nav.hide();
+  }
+});

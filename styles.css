@@ -13,7 +13,7 @@ Dark Slate: #1d1e22 */
 }
 
 body {
-  margin: 1em 0;
+  margin: 0;
   padding: 0;
   text-align: center;
   font-family: 'News Cycle', sans-serif;
@@ -253,6 +253,19 @@ nav{
   display: block;
 }
   /* Header and Bio */
+  .photo-bio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 75%;
+    margin: 0 auto;
+  }
+header p{
+  display: inline-block;
+  max-width: 50%;
+  margin: 0;
+}
 
   /* IMAGES and OVERLAY*/
   .photo-container{
@@ -270,6 +283,6 @@ nav{
   }
   /* Footer */
   .contactLinks h2{
-    font-size: 2vw;
+    font-size: 2.4vw;
   }
 }
