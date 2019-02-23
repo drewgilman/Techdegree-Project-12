@@ -21,7 +21,7 @@
  });
 
  //Navigation and Hamburger Menu
-// $(window).resize(function() {
+// $(window).resize(function() {   
     if ($(window).width()<1024){
       console.log('Test');
      //Rotate Hamburger when clicked and show/hide nav menu
