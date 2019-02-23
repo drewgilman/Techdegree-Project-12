@@ -170,6 +170,7 @@ main h2{
   align-items: center;
   max-width: 700px;
   margin: 0 auto;
+
 }
 
 #contact a{
@@ -181,8 +182,11 @@ main h2{
 .contactLinks{
   width: 40%;
   margin: 0 2em;
+
 }
 .contactLinks img{
+  display: block;
+  margin: 0 auto;
   max-width: 75%;
 }
 .contactLinks a{
@@ -191,7 +195,12 @@ main h2{
   width: 100%;
   height: 100%;
 }
-
+ .contactLinks h2{
+   font-size: 4vw;
+   line-height:auto;
+   margin: 0;
+   color: black;
+ }
 
 @media (min-width: 768px) {
 /*Navigation and Hamburger Menu*/
@@ -231,14 +240,36 @@ main h2{
 .contactLinks{
   width: 30%;
 }
+.contactLinks h2{
+  font-size: 3.5vw;
+}
 
 @media (min-width: 1024px) {
-/*Navigation and Hamburger Menu*/
+  /*Navigation and Hamburger Menu*/
+.burgerButton{
+  display: none;
+}
+nav{
+  display: block;
+}
+  /* Header and Bio */
 
-/* Header and Bio */
-
-/* IMAGES and OVERLAY*/
-
-/* Footer */
-
+  /* IMAGES and OVERLAY*/
+  .photo-container{
+    width: 33%;
+    padding: 0 1em;
+  }
+  .infoContainer h3{
+    font-size: 2.7vw
+  }
+  .infoContainer p {
+    font-size: 1.5vw
+  }
+  .infoContainer a{
+    font-size: 1vw
+  }
+  /* Footer */
+  .contactLinks h2{
+    font-size: 2vw;
+  }
 }
