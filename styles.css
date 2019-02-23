@@ -36,10 +36,10 @@ ul {
 nav{
   display: none;
   text-align: center;
-  background-color: #1d1e22;
+  background-color: rgba(29, 30, 34, 0.9);
   padding: .5em 0;
   margin-bottom: 1em;
-  box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.4);
 }
 nav li{
   padding: 0;
@@ -53,6 +53,10 @@ nav a{
   text-decoration: none;
   color:#feda6a;
   text-transform: uppercase;
+  transition: color .5s ease;
+}
+nav a:hover{
+  color: #fff;
 }
 
 header{
@@ -79,6 +83,12 @@ header{
   outline: none;
 }
 /* Header and Bio */
+.photo-bio p,
+#contact p{
+  padding: .5em 1em;
+  background-color: rgba(29, 30, 34, 0.5);
+  border-radius: 15px;
+}
 .primary-photo{
   width: 100%;
   max-width: 200px;
@@ -170,13 +180,16 @@ main h2{
   align-items: center;
   max-width: 700px;
   margin: 0 auto;
-
 }
 
 #contact a{
   text-decoration: none;
   color: #feda6a;
   font-weight: 700;
+  transition: color .5s ease;
+}
+#contact a:hover{
+  color: #fff;
 }
 
 .contactLinks{
@@ -200,6 +213,11 @@ main h2{
    line-height:auto;
    margin: 0;
    color: black;
+ }
+
+ .copyright{
+   color: black;
+   margin-top: 1em;
  }
 
 @media (min-width: 768px) {
@@ -252,12 +270,13 @@ main h2{
 nav{
   display: block;
 }
+
   /* Header and Bio */
   .photo-bio{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     max-width: 75%;
     margin: 0 auto;
   }
@@ -284,5 +303,10 @@ header p{
   /* Footer */
   .contactLinks h2{
     font-size: 2.4vw;
+  }
+
+  #contact p{
+    margin: 1em auto;
+    max-width: 75%;
   }
 }
