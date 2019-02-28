@@ -1,9 +1,7 @@
 //Remove all project overlays if click outside of #Portfolio
   $('body').click(function(e){
-    if ($(e.target).parents().is('#portfolio')){
-      null;
-    } else{
-        let overlay = $(".photo-overlay");
+    if (!$(e.target).parents().is('#portfolio')){
+      let overlay = $(".photo-overlay");
         overlay.fadeOut();
     }
   });
@@ -39,12 +37,9 @@
 // Close Nav if click outside of Nav
  function bodyClick(e) {
    if ($(window).width()<1024){
-     if ($(e.target).parents().is('.burgerButton' || 'nav') || $(e.target).is('.burgerButton')){
-       return;
-     } else{
-        nav.slideUp();
-        burger.removeClass("rotate");
-        return;
+     if (!$(e.target).parents().is('.burgerButton' || 'nav') && !$(e.target).is('.burgerButton')){
+       nav.slideUp();
+       burger.removeClass("rotate");
      }
    }
  }

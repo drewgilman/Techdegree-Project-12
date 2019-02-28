@@ -81,6 +81,7 @@ header{
   border: none;
   padding: 1em;
   outline: none;
+  cursor: pointer;
 }
 /* Header and Bio */
 .photo-bio p,
@@ -221,44 +222,45 @@ main h2{
 
 @media (min-width: 768px) {
 /*Navigation and Hamburger Menu*/
-ul{
-  flex-direction: row;
-  justify-content: space-around;
-  max-width: 75%;
-  margin: 0 auto;
-}
-nav a{
-  font-size: 1.2em;
-}
-/* Header and Bio */
+  ul{
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 75%;
+    margin: 0 auto;
+  }
+  nav a{
+    font-size: 1.2em;
+  }
+  /* Header and Bio */
 
-/* IMAGES and OVERLAY*/
-main h2{
-  font-size: 4vw;
-}
-#portfolio{
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-.photo-container{
-  width: 50%;
-  padding: 0 1em;
-}
-.infoContainer h3{
-  font-size: 4vw
-}
-.infoContainer p {
-  font-size: 2.5vw
-}
-.infoContainer a{
-  font-size: 1.5vw
-}
-/* Footer */
-.contactLinks{
-  width: 30%;
-}
-.contactLinks h2{
-  font-size: 3.5vw;
+  /* IMAGES and OVERLAY*/
+  main h2{
+    font-size: 4vw;
+  }
+  #portfolio{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .photo-container{
+    width: 50%;
+    padding: 0 1em;
+  }
+  .infoContainer h3{
+    font-size: 4vw
+  }
+  .infoContainer p {
+    font-size: 2.5vw
+  }
+  .infoContainer a{
+    font-size: 1.5vw
+  }
+  /* Footer */
+  .contactLinks{
+    width: 30%;
+  }
+  .contactLinks h2{
+    font-size: 3.5vw;
+  }
 }
 
 @media (min-width: 1024px) {
